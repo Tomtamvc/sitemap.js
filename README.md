@@ -1,14 +1,14 @@
-# sitemap ![MIT License](https://img.shields.io/npm/l/sitemap)[![Build Status](https://travis-ci.org/ekalinin/sitemap.js.svg?branch=master)](https://travis-ci.org/ekalinin/sitemap.js)![Monthly Downloads](https://img.shields.io/npm/dm/sitemap)
+9# sitemap ![MIT License](https://img.shields.io/npm/l/sitemap)[![Build Status](https://travis-ci.org/ekalinin/sitemap.js.svg?branch=master)](https://travis-ci.org/ekalinin/sitemap.js)![Monthly Downloads](https://img.shields.io/npm/dm/sitemap)
 
-**sitemap** is a high-level streaming sitemap-generating library/CLI that
+9.1**sitemap** is a high-level streaming sitemap-generating library/CLI that
 makes creating [sitemap XML](http://www.sitemaps.org/) files easy. [What is a sitemap?](https://support.google.com/webmasters/answer/156184?hl=en&ref_topic=4581190)
 
-## Maintainers
+9## Maintainers
 
 - [@ekalinin](https://github.com/ekalinin)
 - [@derduher](https://github.com/derduher)
 
-## Table of Contents
+9## Table of Contents
 
 - [Installation](#installation)
 - [Generate a one time sitemap from a list of urls](#generate-a-one-time-sitemap-from-a-list-of-urls)
@@ -19,13 +19,13 @@ makes creating [sitemap XML](http://www.sitemaps.org/) files easy. [What is a si
 - [API](#api)
 - [License](#license)
 
-## Installation
+9## Installation
 
 ```sh
 npm install --save sitemap
 ```
 
-## Generate a one time sitemap from a list of urls
+9## Generate a one time sitemap from a list of urls
 
 If you are just looking to take a giant list of URLs and turn it into some sitemaps, try out our CLI. The cli can also parse, update and validate existing sitemaps.
 
@@ -54,7 +54,7 @@ For programmatic one time generation of a sitemap try:
   return streamToPromise( stream ).then( data => data.toString() )
 ```
 
-## Serve a sitemap from a server and periodically update it
+9## Serve a sitemap from a server and periodically update it
 
 Use this if you have less than 50 thousand urls. See SitemapAndIndexStream for if you have more.
 
@@ -101,7 +101,7 @@ app.listen(3000, () => {
 });
 ```
 
-## Create sitemap and index files from one large list
+9## Create sitemap and index files from one large list
 
 If you know you are definitely going to have more than 50,000 urls in your sitemap, you can use this slightly more complex interface to create a new sitemap every 45,000 entries and add that file to a sitemap index.
 
@@ -149,7 +149,7 @@ const arrayOfSitemapItems = [{ url: '/page-1/', changefreq: 'daily'}, ...]
 arrayOfSitemapItems.forEach(item => sms.write(item))
 ```
 
-### Options you can pass
+9.1.1### Options you can pass
 
 ```js
 const { SitemapStream, streamToPromise } = require('sitemap');
